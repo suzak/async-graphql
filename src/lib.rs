@@ -195,9 +195,6 @@ mod subscription;
 mod validation;
 
 pub mod context;
-#[cfg(feature = "dataloader")]
-#[cfg_attr(docsrs, doc(cfg(feature = "dataloader")))]
-pub mod dataloader;
 #[cfg(feature = "dynamic-schema")]
 #[cfg_attr(docsrs, doc(cfg(feature = "dynamic-schema")))]
 pub mod dynamic;
@@ -211,6 +208,9 @@ pub mod validators;
 #[doc(hidden)]
 pub mod registry;
 
+#[cfg(feature = "dataloader")]
+#[cfg_attr(docsrs, doc(cfg(feature = "dataloader")))]
+pub use async_graphql_dataloader as dataloader;
 pub use async_graphql_parser as parser;
 pub use async_graphql_value::{
     from_value, to_value, value, ConstValue as Value, DeserializerError, Name, Number,

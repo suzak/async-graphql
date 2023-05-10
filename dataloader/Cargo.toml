@@ -1,0 +1,30 @@
+[package]
+name = "async-graphql-dataloader"
+version = "5.0.8"
+authors = ["sunli <scott_s829@163.com>", "Koxiaet"]
+edition = "2021"
+description = "dataloader for async-graphql"
+license = "MIT/Apache-2.0"
+documentation = "https://docs.rs/async-graphql-dataloader/"
+homepage = "https://github.com/async-graphql/async-graphql/dataloader"
+repository = "https://github.com/async-graphql/async-graphql"
+keywords = ["futures", "async", "graphql"]
+categories = ["network-programming", "asynchronous"]
+
+[dependencies]
+futures-channel = "0.3.13"
+futures-timer = "3.0.2"
+
+async-trait.workspace = true
+fnv.workspace = true
+futures-util.workspace = true
+lru.workspace = true
+
+[dev-dependencies]
+async-graphql.workspace = true
+tokio = { version = "1.4.0", features = [
+  "macros",
+  "rt-multi-thread",
+  "sync",
+  "time",
+] }

@@ -4,10 +4,9 @@
 //!
 //! ```rust
 //! use async_graphql::*;
-//! use async_graphql::dataloader::*;
+//! use async_graphql_dataloader::*;
 //! use std::collections::{HashSet, HashMap};
 //! use std::convert::Infallible;
-//! use async_graphql::dataloader::Loader;
 //!
 //! /// This loader simply converts the integer key into a string value.
 //! struct MyLoader;
